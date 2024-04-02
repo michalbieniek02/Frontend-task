@@ -1,0 +1,31 @@
+# Dependency directories
+/node_modules
+
+# Production build directory
+/build
+
+# Environment variables file
+.env
+
+# IDE files
+.vscode
+.idea
+
+# macOS directory attributes
+.DS_Store
+
+# npm-debug.log
+npm-debug.log*
+
+# Yarn logs
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
