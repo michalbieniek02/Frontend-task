@@ -15,7 +15,11 @@ module.exports = {
         'dark-100': '#282938',
         'dark-200': '#535460',
         'navdark-100': '#24254A',
-        'navdark-200': '#1C1E53'
+        'navdark-200': '#1C1E53',
+        'yellow-light-100': '#FCD980',
+        'home-text-100' : '#282938',
+        'contact-text-100':'#1D2130'
+
       }
     },
   },

@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import companyLogo from "../assets/companyLogo.png";
 import burgerIcon from "../assets/burger.png";
 import closeIcon from "../assets/closeIcon.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleContact = () => {
+    navigate("/contact");
+  };
   return (
     <header className="bg-navdark-200">
       <div className="flex items-center justify-between px-4 py-4">
@@ -23,13 +26,16 @@ export default function Navbar() {
           )}
         </button>
         <nav className="hidden lg:flex text-gray-300">
-          <Link to="/" className="hover:text-gray-400 px-3 py-2">
+          <Link to="/" className="hover:text-gray-400 px-3 py-2 font-medium">
             Home
           </Link>
           <Link to="/about" className="hover:text-gray-400 px-3 py-2">
             About Us
           </Link>
-          <button class=" border border-gray-400 bg-transparent px-4 py-2 text-center text-base rounded-full transition duration-300 ease-in-out hover:bg-navdark-100 ml-20 mr-20">
+          <button
+            onClick={handleContact}
+            class=" border border-gray-400 bg-transparent px-4 py-2 text-center text-base rounded-full transition duration-300 ease-in-out hover:bg-navdark-100 ml-20 mr-20"
+          >
             Contact us
           </button>
         </nav>
@@ -63,7 +69,7 @@ export default function Navbar() {
               >
                 About Us
               </Link>
-              <button class="border border-gray-400 bg-transparent mt-6 px-8 py-3 text-center text-base rounded-full transition duration-300 ease-in-out hover:bg-navdark-100 ">
+              <button onClick={handleContact} className="border border-gray-400 bg-transparent mt-6 px-8 py-3 text-center text-base rounded-full transition duration-300 ease-in-out hover:bg-navdark-100 ">
                 Contact us
               </button>
             </nav>
