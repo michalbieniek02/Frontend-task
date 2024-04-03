@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import AboutUs from "./components/AboutUs";
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm'
+import FooterMobile from './components/FooterMobile';
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactForm/>} />
         </Routes>
+        <div className='bottom-0'>
+
         <Footer/>
+        <FooterMobile/>
+        </div>
       </div>
     </Router>
   );

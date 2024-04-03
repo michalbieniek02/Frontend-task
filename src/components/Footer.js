@@ -6,7 +6,7 @@ import ig from "../assets/igLogo.png";
 import lnkd from "../assets/linkdInLogo.png";
 const Footer = () => {
   return (
-    <div className="pt-6 mt-16  mx-auto bg-navdark-200 flex items-center gap-20 justify-between">
+    <div className="pt-6 mt-16  mx-auto bg-navdark-200 hidden items-center gap-20 justify-between lg:flex">
       <div className="ml-40 mt-20">
         <img className="h-7" src={logo}></img>
         <p className="text-white mt-6">

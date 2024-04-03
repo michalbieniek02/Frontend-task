@@ -13,23 +13,25 @@ export default function AboutUs() {
   const cardStyle = "bg-gray-200 p-6 rounded-lg shadow-md";
   return (
     <div>
-      <div className="flex bg-navdark-200 text-white pb-16">
-        <div className="mt-48 ml-32">
-          <h1 className="font-semibold text-6xl">All the features you need </h1>
+      <div className="flex flex-wrap bg-navdark-200 text-white pb-14">
+        <div className="lg:mt-48 lg:ml-32 p-10 lg:p-0">
+          <h1 className="text-center md:text-left font-semibold text-4xl lg:text-6xl">All the features <br/>you need </h1>
           <p className="mt-16">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <br/>do
             eiusmod tempor incididunt.
           </p>
         </div>
 
-        <img className="h-[24rem] ml-44 mr-56 mt-36" src={headImage} />
+        <img className="h-[30%] lg:ml-72 lg:mt-36 p-8 lg:p-0" src={headImage} />
       </div>
 
-      <div className="p-20">
-        <h1 className="text-home-text-100 font-semibold text-7xl text-center text-wrap mt-10 mb-10 ml-72 mr-72">
-          The benefits of working with us
+      <div className="p-10 md:p-20">
+        <h1 className=" text-home-text-100 font-semibold text-4xl lg:text-7xl text-center text-wrap mt-10 mb-10 lg:ml-72 lg:mr-72">
+          The benefits of working
+          <br />
+          with us
         </h1>
-        <div className="flex gap-8 justify-center">
+        <div className="flex flex-wrap gap-8 justify-center">
           <CardWithIcon
             icon={icon1}
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim."
@@ -51,14 +53,16 @@ export default function AboutUs() {
         </div>
       </div>
       <div className="pb-32 bg-gray-200 justify-between">
-  <h1 className="pt-20 font-semibold text-6xl text-center">Meet our team</h1>
-  <div className="flex gap-8 justify-center">
-    <HeroCard src={person1} name='John Smith' title='CEO'/>
-    <HeroCard src={person2} name='Simon Adams' title='CTO'/>
-    <HeroCard src={person3} name='Paul Jones' title='Design lead'/>
-    <HeroCard src={person4} name='Sara hardin' title='Project Manager'/>
-  </div>
-</div>
+        <h1 className="pt-20 font-semibold text-4xl lg:text-6xl text-center">
+          Meet our team
+        </h1>
+        <div className="flex flex-wrap p-10 gap-8 justify-center">
+          <HeroCard src={person1} name="John Smith" title="CEO" />
+          <HeroCard src={person2} name="Simon Adams" title="CTO" />
+          <HeroCard src={person3} name="Paul Jones" title="Design lead" />
+          <HeroCard src={person4} name="Sara hardin" title="Project Manager" />
+        </div>
+      </div>
     </div>
   );
 }

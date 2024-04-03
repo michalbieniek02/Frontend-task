@@ -13,11 +13,12 @@ export default function Navbar() {
 
   const handleContact = () => {
     navigate("/contact");
+    toggleMenu()
   };
   return (
     <header className="bg-navdark-200">
       <div className="flex items-center justify-between px-4 py-4">
-        <img src={companyLogo} alt="Company Logo" className="ml-28 h-6" />
+        <img src={companyLogo} alt="Company Logo" className="lg:ml-28 h-6" />
         <button className="block lg:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <img src={closeIcon} alt="Close Menu" className="h-6" />
